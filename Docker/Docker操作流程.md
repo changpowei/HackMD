@@ -18,13 +18,11 @@
 ### Step 2: 找環境
 - https://ngc.nvidia.com/catalog/all
 - 如tensorflow
-    環境不是越新越好，要搭配tensorflow的需求
-  - https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/rel_19.10.html#rel_19.10
+  - https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/rel_20-02.html#rel_20-02
 
 - 下載
-此環境支援tensorflow 2.1.0，cudnn為7.6.4，CUDA為10.1
 ```
-$ sudo docker pull nvcr.io/nvidia/tensorflow:19.10-py3
+$ sudo docker pull nvcr.io/nvidia/tensorflow:20.02-tf2-py3
 ```
 
 - 查看下載的 image
@@ -53,9 +51,9 @@ $ nvcc -V
 - -\-name: 命名container的名字
     :arrow_right:c95cpw
 - -it: 會自動執行 docker pull，跑起來自動執行 bash 程式進入此Container
-    :arrow_right:nvcr.io/nvidia/tensorflow:19.10-py3
+    :arrow_right:nvcr.io/nvidia/tensorflow:20.02-tf2-py3
 ```
-$ sudo docker run --gpus all --name c95cpw -it nvcr.io/nvidia/tensorflow:19.10-py3 /bin/bash
+$ sudo docker run --gpus all --name c95cpw -it nvcr.io/nvidia/tensorflow:20.02-tf2-py3 /bin/bash
 ```
 ---
 ## Docker 相關指令

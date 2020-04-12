@@ -4,6 +4,7 @@
 - Git 相關教學網站
     - http://gogojimmy.net/2012/01/17/how-to-use-git-1-git-basic/
     - https://windsuzu.github.io/learn-git/
+    - https://ihower.tw/git/basic.html#sec2
 ---
 ## 開始使用 Git (init, clone)
 ### 建立自己要控管的 Repository (init)
@@ -230,3 +231,22 @@ revert 為提交一個新的commit，其內容==執行的動作為指定commit�
 透過 `$ git revert  HEAD` 執行上次提交的相反動作，並commit新的版本，其資料夾內又出現剛剛刪除的檔案。
 
 ![](https://i.imgur.com/FBNpVtY.png)
+
+---
+## 遠端操作 (remote)
+
+### 新增一個遠端的repository (add)
+`$ git remote add remote名稱 remote網址` : 
+例如`$ git remote add ABC git://github.com/gogojimmy/test.git`，ABC為遠端資料庫在本地端的節點名稱。
+
+### 刪除一個本地端的遠端資料庫節點 (remove)
+`$ git remote remove ABC`
+
+### 本地端的 branch 上傳到遠端 (push)
+`$ git push ABC branch_name`:  ABC 為節點名稱，branch_name為分之的名稱(如：master)。
+
+### 刪除遠端的資料庫的branch 
+`$ git push ABC :branch_name`: 如同上傳指令，但在要刪除得分之前面家一個冒號 " : "。
+
+### 下載遠端資料庫得branch (pull)
+`git pull remote名稱 branch名稱` : 下載一個遠端的 branch 並合併(注意是下載遠端的 branch 合併到目前本地端所在的 branch)。
